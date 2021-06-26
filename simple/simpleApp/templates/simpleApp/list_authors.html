@@ -1,0 +1,7 @@
+<div class="list-group">
+    {% for i in authors %}
+    <a href="{% url 'author' i.pk %}" class="list-group-item list-group-item-action">{{ i.name }}
+        <span class="badge badge-primary badge-pill">{{ i.cnt }}</span>
+    </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,12 @@
+{% load simple_tags %}
+{% comment %}
+<div class="list-group">
+    <h6>Список Авторов</h6>
+    {% get_authors_list as authors%}
+    {% for i in authors %}
+    <a href="{% url 'author' i.pk %}" class="list-group-item list-group-item-action">{{ i.name }}</a>
+    {% endfor %}
+</div>
+<br>
+{% endcomment %}
+{% show_authors %}

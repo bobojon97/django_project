@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %} 
+{{ post_item.title }} :: {{ block.super }}
+{% endblock %}
+
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        Автор: <a href="{{ post_item.get_absolute_url }}"> {{ post_item.name }} </a>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"> {{ post_item.title }}</h5>
+        <p class="card-text">{{ post_item.desc }}</p>
+        <a href="{{ post_item.get_absolute_url }}" class="btn btn-primary">Read more...</a>
+    </div>
+</div>
+{% endblock %}

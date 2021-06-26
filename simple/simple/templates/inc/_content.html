@@ -1,0 +1,14 @@
+<div class="col-md-9">
+    {% for i in object_list %}
+       <div class="card mb-3">
+           <div class="card-header">
+               Автор: <a href="{{ i.get_absolute_url }}"> {{ i.name }} </a>
+           </div>
+           <div class="card-body">
+               <h5 class="card-title"> {{ i.title }}</h5>
+               <p class="card-text">{{ i.desc }}</p>
+               <a href="{{ i.get_absolute_url }}" class="btn btn-primary">Read more...</a>
+           </div>
+       </div>
+   {% endfor %}
+   </div>
